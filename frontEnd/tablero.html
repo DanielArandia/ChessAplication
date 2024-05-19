@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajedrez</title>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      background-color: #383732; /* Fondo café claro */
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(8, 80px);
+      grid-template-rows: repeat(8, 80px);
+      margin-bottom: 20px; /* Espacio entre el tablero y el botón */
+    }
+
+    .white {
+      background-color: #aa8345;
+    }
+
+    .black {
+      background-color: #000000;
+    }
+
+    #newGameBtn {
+      background-color: #a0721d; /* Botón blanco */
+      color: #000000; /* Texto negro */
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    #newGameBtn:hover {
+      background-color: #e0e0e0; /* Cambio de color al pasar el ratón */
+    }
+  </style>
+</head>
+<body>
+  <div class="board" id="board">
+  </div>
+  
+  <button id="newGameBtn">Partida Nueva</button> <!-- Botón para iniciar una nueva partida -->
+
+  <script src="tablero.js"></script><!-- El tablero de ajedrez se crea dinámicamente mediante JavaScript -->
+  <script src="chessGame.js"></script> <!-- Tu clase de JavaScript -->
+</body>
+</html>
